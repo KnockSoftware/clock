@@ -1,46 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-var looper;
-var minuteDegrees = 0;
-var hourDegrees = 0;
-var animationInterval = 15;
-
-function animateClock(secondsPerHour){
-	hourIncrement = 30 / ((secondsPerHour*1000) / animationInterval);
-	
-	hourDegrees = (hourDegrees + hourIncrement) % 360;
-	minuteDegrees = (minuteDegrees + hourIncrement*12) % 360;
-	
-	var minuteElem = document.getElementById("minute");
-	var hourElem = document.getElementById("hour");
-	
-	if(navigator.userAgent.match("Chrome")){
-		minuteElem.style.WebkitTransform = "rotate("+minuteDegrees+"deg)";
-		hourElem.style.WebkitTransform = "rotate("+hourDegrees+"deg)";
-	} else if(navigator.userAgent.match("Firefox")){
-		minuteElem.style.MozTransform = "rotate("+minuteDegrees+"deg)";
-		hourElem.style.MozTransform = "rotate("+hourDegrees+"deg)";
-	} else if(navigator.userAgent.match("MSIE")){
-		minuteElem.style.msTransform = "rotate("+minuteDegrees+"deg)";
-		hourElem.style.msTransform = "rotate("+hourDegrees+"deg)";
-	} else if(navigator.userAgent.match("Opera")){
-		minuteElem.style.OTransform = "rotate("+minuteDegrees+"deg)";
-		hourElem.style.OTransform = "rotate("+hourDegrees+"deg)";
-	} else {
-		minuteElem.style.transform = "rotate("+minuteDegrees+"deg)";
-		hourElem.style.transform = "rotate("+hourDegrees+"deg)";
+	<style>
+	:root {
+	  --secondsPerHour: 2s;
 	}
-	
-	looper = setTimeout('animateClock('+secondsPerHour + ')', animationInterval);
-}
-</script>
+	#minute {
+		--animationTime: var(--secondsPerHour);
+		position: absolute; 
+		left: 202px; 
+		top: 38px; 
+		transform-origin: 50% 171px;
+	    -webkit-animation:spin var(--animationTime) linear infinite;
+	    -moz-animation:spin var(--animationTime) linear infinite;
+	    animation:spin var(--animationTime) linear infinite;
+	}
+	#hour {
+		--animationTime: calc(var(--secondsPerHour)*12);
+		position: absolute; 
+		left:202px; 
+		top: 129px;
+		transform-origin: 50% 80px;
+	    -webkit-animation:spin var(--animationTime) linear infinite;
+	    -moz-animation:spin var(--animationTime) linear infinite;
+	    animation:spin var(--animationTime) linear infinite;
+	}
+	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+	@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+	</style>
 </head>
 <body>
 <img id="face" src="face.svg" style="position: absolute">
-<img id="hour" src="hour.svg" style="position: absolute; left:202px; top: 129px; transform-origin: 50% 80px">
-<img id="minute" src="minute.svg" style="position: absolute; left: 202px; top: 38px; transform-origin: 50% 171px">
-<script>animateClock(2);</script>
+<img id="hour" src="hour.svg">
+<img id="minute" src="minute.svg">
 </body>  
 </html>
