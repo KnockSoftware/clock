@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var looper;
+function rotateAnimation(el,speed, increment ,degrees){
+	var elem = document.getElementById(el);
+	if(navigator.userAgent.match("Chrome")){
+		elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Firefox")){
+		elem.style.MozTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("MSIE")){
+		elem.style.msTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Opera")){
+		elem.style.OTransform = "rotate("+degrees+"deg)";
+	} else {
+		elem.style.transform = "rotate("+degrees+"deg)";
+	}
+	
+	var nextDegrees = degrees + increment;
+	if(nextDegrees > 359){
+		nextDegrees = 1;
+	}
+	looper = setTimeout('rotateAnimation(\''+el+'\','+speed+ ',' + increment + ',' + nextDegrees + ')',speed);
+}
+</script>
+</head>
+<body>
+<img id="face" src="face.svg" style="position: absolute">
+<img id="hour" src="hour.svg" style="position: absolute; left:202px; top: 129px; transform-origin: 50% 80px">
+<img id="minute" src="minute.svg" style="position: absolute; left: 202px; top: 38px; transform-origin: 50% 171px">
+<script>rotateAnimation("hour",40,1,0);</script>
+<script>rotateAnimation("minute",40,12,0);</script>
+</body>  
+</html>

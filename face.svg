@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M200,400 C310.45695,400 400,310.45695 400,200 C400,89.54305 310.45695,0 200,0 C89.54305,0 0,89.54305 0,200 C0,310.45695 89.54305,400 200,400 Z M200,370 C293.888407,370 370,293.888407 370,200 C370,106.111593 293.888407,30 200,30 C106.111593,30 30,106.111593 30,200 C30,293.888407 106.111593,370 200,370 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <g id="Mask"></g>
+        <g id="Hour-marks" mask="url(#mask-2)" stroke="#979797" stroke-width="4" stroke-linecap="square">
+            <path d="M201,0 L201,400" id="Line" transform="translate(201.000000, 200.000000) rotate(30.000000) translate(-201.000000, -200.000000) "></path>
+            <path d="M201,0 L201,400" id="Line" transform="translate(201.000000, 200.000000) rotate(60.000000) translate(-201.000000, -200.000000) "></path>
+            <path d="M200,0 L200,400" id="Line" transform="translate(200.000000, 200.000000) rotate(90.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M201,0 L201,400" id="Line" transform="translate(201.000000, 200.000000) rotate(120.000000) translate(-201.000000, -200.000000) "></path>
+            <path d="M201,0 L201,400" id="Line" transform="translate(201.000000, 200.000000) rotate(150.000000) translate(-201.000000, -200.000000) "></path>
+            <path d="M200,400 L200,0" id="Line"></path>
+        </g>
+        <g id="Minute-Marks" mask="url(#mask-2)" stroke="#979797" stroke-width="2" stroke-linecap="square">
+            <path d="M220.905693,1.09562093 L179.094307,398.904379" id="Line"></path>
+            <path d="M241.582338,4.37047985 L158.417662,395.62952" id="Line"></path>
+            <path d="M261.803399,9.78869674 L138.196601,390.211303" id="Line"></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line"></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(12.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(18.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(24.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(30.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(42.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(48.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(54.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(60.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(72.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(78.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(84.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(90.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(102.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(108.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(114.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(120.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(132.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(138.000000) translate(-200.000000, -200.000000) "></path>
+            <path d="M241.582338,395.62952 L158.417662,4.37047985" id="Line"></path>
+            <path d="M281.347329,17.2909085 L118.652671,382.709092" id="Line" transform="translate(200.000000, 200.000000) rotate(150.000000) translate(-200.000000, -200.000000) "></path>
+        </g>
+        <circle id="Oval-3" stroke="#979797" stroke-width="2" cx="200" cy="201" r="5"></circle>
+    </g>
+</svg>
