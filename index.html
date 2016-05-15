@@ -3,25 +3,33 @@
 <head>
 <script>
 var looper;
-function rotateAnimation(el,speed, increment ,degrees){
-	var elem = document.getElementById(el);
+var minuteDegrees = 0;
+var hourDegrees = 0;
+function animateClock(speed){
+	minuteDegrees = (minuteDegrees + speed*12) % 360;
+	hourDegrees = (hourDegrees + speed) % 360;
+	
+	var minuteElem = document.getElementById("minute");
+	var hourElem = document.getElementById("hour");
+	
 	if(navigator.userAgent.match("Chrome")){
-		elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+		minuteElem.style.WebkitTransform = "rotate("+minuteDegrees+"deg)";
+		hourElem.style.WebkitTransform = "rotate("+hourDegrees+"deg)";
 	} else if(navigator.userAgent.match("Firefox")){
-		elem.style.MozTransform = "rotate("+degrees+"deg)";
+		minuteElem.style.MozTransform = "rotate("+minuteDegrees+"deg)";
+		hourElem.style.MozTransform = "rotate("+hourDegrees+"deg)";
 	} else if(navigator.userAgent.match("MSIE")){
-		elem.style.msTransform = "rotate("+degrees+"deg)";
+		minuteElem.style.msTransform = "rotate("+minuteDegrees+"deg)";
+		hourElem.style.msTransform = "rotate("+hourDegrees+"deg)";
 	} else if(navigator.userAgent.match("Opera")){
-		elem.style.OTransform = "rotate("+degrees+"deg)";
+		minuteElem.style.OTransform = "rotate("+minuteDegrees+"deg)";
+		hourElem.style.OTransform = "rotate("+hourDegrees+"deg)";
 	} else {
-		elem.style.transform = "rotate("+degrees+"deg)";
+		minuteElem.style.transform = "rotate("+minuteDegrees+"deg)";
+		hourElem.style.transform = "rotate("+hourDegrees+"deg)";
 	}
 	
-	var nextDegrees = degrees + increment;
-	if(nextDegrees > 359){
-		nextDegrees = 1;
-	}
-	looper = setTimeout('rotateAnimation(\''+el+'\','+speed+ ',' + increment + ',' + nextDegrees + ')',speed);
+	looper = setTimeout('animateClock('+speed + ')', 15);
 }
 </script>
 </head>
@@ -29,7 +37,6 @@ function rotateAnimation(el,speed, increment ,degrees){
 <img id="face" src="face.svg" style="position: absolute">
 <img id="hour" src="hour.svg" style="position: absolute; left:202px; top: 129px; transform-origin: 50% 80px">
 <img id="minute" src="minute.svg" style="position: absolute; left: 202px; top: 38px; transform-origin: 50% 171px">
-<script>rotateAnimation("hour",40,1,0);</script>
-<script>rotateAnimation("minute",40,12,0);</script>
+<script>animateClock(0.1);</script>
 </body>  
 </html>
