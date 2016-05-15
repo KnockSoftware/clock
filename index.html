@@ -5,9 +5,13 @@
 var looper;
 var minuteDegrees = 0;
 var hourDegrees = 0;
-function animateClock(speed){
-	minuteDegrees = (minuteDegrees + speed*12) % 360;
-	hourDegrees = (hourDegrees + speed) % 360;
+var animationInterval = 15;
+
+function animateClock(secondsPerHour){
+	hourIncrement = 30 / ((secondsPerHour*1000) / animationInterval);
+	
+	hourDegrees = (hourDegrees + hourIncrement) % 360;
+	minuteDegrees = (minuteDegrees + hourIncrement*12) % 360;
 	
 	var minuteElem = document.getElementById("minute");
 	var hourElem = document.getElementById("hour");
@@ -29,7 +33,7 @@ function animateClock(speed){
 		hourElem.style.transform = "rotate("+hourDegrees+"deg)";
 	}
 	
-	looper = setTimeout('animateClock('+speed + ')', 15);
+	looper = setTimeout('animateClock('+secondsPerHour + ')', animationInterval);
 }
 </script>
 </head>
@@ -37,6 +41,6 @@ function animateClock(speed){
 <img id="face" src="face.svg" style="position: absolute">
 <img id="hour" src="hour.svg" style="position: absolute; left:202px; top: 129px; transform-origin: 50% 80px">
 <img id="minute" src="minute.svg" style="position: absolute; left: 202px; top: 38px; transform-origin: 50% 171px">
-<script>animateClock(0.1);</script>
+<script>animateClock(2);</script>
 </body>  
 </html>
